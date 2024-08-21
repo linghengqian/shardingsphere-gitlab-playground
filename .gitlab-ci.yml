@@ -1,0 +1,12 @@
+stages:
+  - build
+test-build:
+  image: docker:27.1.2-dind-alpine3.20
+  tags:
+    - test-shardingsphere
+  stage: build
+  script:
+    - docker pull ghcr.io/apache/shardingsphere-proxy:latest
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+    - docker tag ghcr.io/apache/shardingsphere-proxy:latest $CI_REGISTRY_IMAGE/apache-shardingsphere-proxy:latest
+    - docker push $CI_REGISTRY_IMAGE/apache-shardingsphere-proxy:latest

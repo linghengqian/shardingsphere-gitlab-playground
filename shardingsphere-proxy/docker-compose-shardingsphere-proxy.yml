@@ -1,0 +1,11 @@
+services:
+  apache-shardingsphere-proxy:
+    image: 127.0.0.1:32345/root/shardingsphere-gitlab-playground/apache-shardingsphere-proxy:5.5.1-SNAPSHOT
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+      PORT: 3308
+    ports:
+      - "13308:3308"
+    volumes:
+      - ./conf:/opt/shardingsphere-proxy/conf

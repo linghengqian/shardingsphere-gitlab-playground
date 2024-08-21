@@ -1,0 +1,8 @@
+mode:
+  type: Standalone
+  repository:
+    type: JDBC
+authority:
+  users:
+    - user: root@%
+      password: root
