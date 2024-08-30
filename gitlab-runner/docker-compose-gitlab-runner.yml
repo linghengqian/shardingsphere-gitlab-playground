@@ -1,6 +1,6 @@
 services:
   gitlab-runner-first:
-    image: gitlab/gitlab-runner:ubuntu-v17.3.0
+    image: gitlab/gitlab-runner:ubuntu-v17.3.1
     restart: always
     environment:
       TZ: Asia/Shanghai

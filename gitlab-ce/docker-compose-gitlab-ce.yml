@@ -1,6 +1,6 @@
 services:
   gitlab-ce:
-    image: gitlab/gitlab-ce:17.3.0-ce.0
+    image: gitlab/gitlab-ce:17.3.1-ce.0
     restart: always
     environment:
       TZ: Asia/Shanghai

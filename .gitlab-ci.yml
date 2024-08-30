@@ -1,7 +1,7 @@
 stages:
   - build
 test-build:
-  image: docker:27.1.2-dind-alpine3.20
+  image: docker:27.2.0-dind-alpine3.20
   tags:
     - test-shardingsphere
   stage: build
